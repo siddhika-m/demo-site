@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    max-width: 1180px;
+    margin: 0px auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.banner-cards img {
+    display: flex;
+    object-fit: cover;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-items {
+    display: flex;
+}
+
+.nav-items li {
+    padding: 40px 30px;
+    font-weight: 700;
+    font-size: 1.2rem;
+
+}
+
+.nav-items li:hover {
+    color: white;
+    background: linear-gradient(rgb(188, 128, 225), rgb(57, 57, 225));
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+}
+
+.banner img {
+    height: 550px;
+    width: 100%;
+    object-fit: fill;
+}
+
+.banner-cards {
+    max-width: 1180px;
+    position: absolute;
+    padding: 0px 50px;
+    display: flex;
+    color: white;
+    top: 500px;
+    gap: 20px;
+    justify-content: center;
+    line-height: 1.1;
+}
+
+.banner-cards img {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.banner-cards div {
+    padding: 40px;
+    padding-bottom: 20px;
+    width: calc(100/4);
+}
+
+.banner-cards h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    opacity: 0.9;
+
+}
+
+.banner-cards p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    position: relative;
+}
+
+#card1 {
+    background: linear-gradient(rgb(229, 215, 63), hsl(31, 100%, 50%));
+}
+
+#card2 {
+    background: linear-gradient(rgb(223, 70, 223), rgb(57, 57, 218));
+}
+
+#card3 {
+    background: linear-gradient(rgb(236, 50, 50), rgb(223, 36, 154));
+}
+
+#card4 {
+    background: linear-gradient(rgb(237, 78, 160), rgb(181, 27, 181));
+}
