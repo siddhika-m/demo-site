@@ -6,6 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*Elements*/
 body {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -22,17 +23,13 @@ a {
     color: black;
 }
 
+/*Header*/
+/*Navbar*/
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 50px;
-}
-
-.banner-cards img {
-    display: flex;
-    object-fit: cover;
-    justify-content: space-between;
 }
 
 .nav-logo {
@@ -44,18 +41,21 @@ nav {
     display: flex;
 }
 
-.nav-items li {
+.nav-items a {
+    display: block;
     padding: 40px 30px;
     font-weight: 700;
     font-size: 1.2rem;
-
 }
 
-.nav-items li:hover {
+.nav-items a:hover {
     color: white;
     background: linear-gradient(rgb(188, 128, 225), rgb(57, 57, 225));
+
 }
 
+/*Main*/
+/*Banner page*/
 .banner {
     position: relative;
     width: 100%;
@@ -79,25 +79,18 @@ nav {
     line-height: 1.1;
 }
 
-.banner-cards img {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-}
-
-.banner-cards div {
+.cardB {
     padding: 40px;
     padding-bottom: 20px;
-    width: calc(100/4);
+    width: 28ch;
+    hyphens: auto;
 }
 
 .banner-cards h2 {
     font-size: 2.2rem;
+    margin-bottom: 20px;
     font-weight: 600;
     opacity: 0.9;
-
 }
 
 .banner-cards p {
@@ -106,23 +99,34 @@ nav {
     position: relative;
 }
 
-#card1 {
+.banner-cards img {
+    display: flex;
+    object-fit: cover;
+    justify-content: space-between;
+    aspect-ratio: 4/3;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.cardB:nth-child(1) {
     background: linear-gradient(rgb(229, 215, 63), hsl(31, 100%, 50%));
 }
 
-#card2 {
+.cardB:nth-child(2) {
     background: linear-gradient(rgb(223, 70, 223), rgb(57, 57, 218));
 }
 
-#card3 {
+.cardB:nth-child(3) {
     background: linear-gradient(rgb(236, 50, 50), rgb(223, 36, 154));
 }
 
-#card4 {
+.cardB:nth-child(4) {
     background: linear-gradient(rgb(237, 78, 160), rgb(181, 27, 181));
 }
 
-/*Home*/
+
+/*Home Page*/
 #home {
     padding-top: 210px;
 }
@@ -130,34 +134,38 @@ nav {
 .home-cards {
     display: flex;
     padding: 0px 50px;
-    gap: 20px;
+    gap: 25px;
     margin: 40px 0px;
 }
 
 .card {
+    max-width: 533px;
+    flex: 1;
     padding: 70px 40px;
-    height: 400px;
     align-items: center;
-    justify-content: center;
     background-color: rgb(246, 246, 246);
 }
 
-.I {
+.card-img {
     padding: 0;
 }
 
-.card img {
-    height: 400px;
+.card-img img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .card h2 {
     line-height: 1.2;
     font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .card p {
     font-size: 1.1rem;
+    width: 45ch;
+    hyphens: auto;
 }
 
 .btn {
@@ -169,6 +177,7 @@ nav {
     background: linear-gradient(to right, orange, red);
 }
 
+/*About Page*/
 #about {
     width: 100%;
     position: relative;
@@ -190,7 +199,6 @@ nav {
 }
 
 .content {
-    width: 90%;
     width: 50%;
     top: 0;
     left: 25px;
@@ -203,11 +211,15 @@ nav {
 .overlay-content h2 {
     font-size: 2.4rem;
     font-weight: 500;
+    margin-bottom: 30px;
 }
 
 .overlay-content p {
     font-size: 1rem;
     letter-spacing: 1.2px;
+    margin-bottom: 20px;
+    width: 41ch;
+    hyphens: auto;
 }
 
 .overlay-content button {
@@ -217,37 +229,40 @@ nav {
     margin: 40px 0px;
 }
 
+/*Gallery Page*/
 .gallery-card {
     background: linear-gradient(rgb(254, 187, 51), rgb(255, 132, 0));
     color: white;
     padding: 50px 0px 50px 70px;
-    height: 350px;
+    height: 402px;
     flex: 1;
 }
 
 .gallery-card h2 {
     font-weight: 500;
+    margin-bottom: 20px;
 }
 
 .gallery-card li {
-    margin-left: 25px;
+    margin-left: 20px;
     list-style-type: circle;
     line-height: 2;
     font-size: 1.2rem;
 }
 
-.G {
+.gallery-img {
     padding: 0;
-    height: 350px;
+    aspect-ratio: 4/3;
     flex: 1;
 }
 
-.G img {
+.gallery-img img {
     object-fit: cover;
-    height: 350px;
+    max-width: 531px;
     width: 100%;
 }
 
+/*Blog Page*/
 .blog-posts {
     display: flex;
     margin: 40px 50px;
@@ -255,7 +270,7 @@ nav {
 }
 
 .post {
-    width: calc(100/4);
+    width: calc(100%/4);
     background-color: rgb(246, 246, 246);
     position: relative;
     align-items: center;
@@ -267,11 +282,20 @@ nav {
 .post img {
     border-radius: 100px;
     position: absolute;
-    height: 150px;
+    aspect-ratio: 1;
     bottom: 220px;
     right: 50px;
     left: 50px;
 
+}
+
+.post p {
+    line-height: 1.3;
+    font-size: 1.1rem;
+    opacity: 0.65;
+    margin-bottom: 35px;
+    width: 19ch;
+    hyphens: auto;
 }
 
 .post span {
@@ -281,13 +305,7 @@ nav {
     bottom: 30px;
 }
 
-.post p {
-    line-height: 1.3;
-    font-size: 1.1rem;
-    opacity: 0.65;
-    padding-bottom: 40px;
-}
-
+/*Contact Page*/
 .contacts {
     display: flex;
     margin: 0px 50px;
@@ -301,20 +319,21 @@ nav {
     color: white;
     align-items: center;
     justify-content: center;
-    padding: 40px 50px ;
-    padding-bottom:20px ;
+    padding: 40px 50px;
+    padding-bottom: 20px;
     line-height: 1.8;
-    width: 100%;
     background: linear-gradient(cornflowerblue, rgb(10, 112, 255));
 }
 
 .contact-info h2 {
     font-size: 2.8rem;
 }
-.contact-info p{
+
+.contact-info p {
     font-size: 1.2rem;
     opacity: 0.8;
 }
+
 .contact-info span {
     letter-spacing: 2;
     font-size: 2.4rem;
@@ -334,15 +353,16 @@ nav {
     background-color: white;
 }
 
-.maps{
+.maps {
     height: 400px;
     width: 100%;
     background: url(images/map.png) center/cover;
 }
 
-footer p{
+/*Footer*/
+footer p {
     margin: 50px 0px;
     text-align: center;
-    color:rgb(162, 162, 162);
+    color: rgb(162, 162, 162);
 
 }
