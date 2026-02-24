@@ -176,9 +176,11 @@ nav {
     height: 500px;
     background: url(images/swimming-bg1.jpg) center/cover;
 }
-.overlay-content{
+
+.overlay-content {
     width: 50%;
 }
+
 .overlay {
     width: 90%;
     opacity: 0.85;
@@ -195,7 +197,7 @@ nav {
     position: absolute;
     opacity: 1;
     color: white;
-    padding:50px 90px;
+    padding: 50px 90px;
 }
 
 .overlay-content h2 {
@@ -203,41 +205,83 @@ nav {
     font-weight: 500;
 }
 
-.overlay-content p{
+.overlay-content p {
     font-size: 1rem;
-    letter-spacing:1.2px;
+    letter-spacing: 1.2px;
 }
 
-.overlay-content button{
+.overlay-content button {
     border: none;
     padding: 20px 50px;
     text-align: center;
     margin: 40px 0px;
 }
 
-.gallery-card{
-    background: linear-gradient(rgb(254, 187, 51),rgb(255, 132, 0));
+.gallery-card {
+    background: linear-gradient(rgb(254, 187, 51), rgb(255, 132, 0));
     color: white;
-    padding:50px 0px 50px 70px; 
+    padding: 50px 0px 50px 70px;
     height: 350px;
     flex: 1;
 }
-.gallery-card h2{
+
+.gallery-card h2 {
     font-weight: 500;
 }
-.gallery-card li{
+
+.gallery-card li {
     margin-left: 25px;
     list-style-type: circle;
     line-height: 2;
     font-size: 1.2rem;
 }
-.G{
+
+.G {
     padding: 0;
     height: 350px;
     flex: 1;
 }
-.G img{
+
+.G img {
     object-fit: cover;
     height: 350px;
     width: 100%;
+}
+
+.blog-posts {
+    display: flex;
+    margin: 40px 50px;
+    gap: 20px;
+}
+
+.post {
+    width: calc(100/4);
+    background-color: rgb(246, 246, 246);
+    position: relative;
+    align-items: center;
+    margin-top: 100px;
+    padding: 30px;
+    padding-top: 120px;
+}
+
+.post img {
+    border-radius: 100px;
+    position: absolute;
+    bottom: 280px;
+    right: 37px;
+
+}
+
+.post span {
+    color: #ff5f24;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 30px;
+}
+
+.post p {
+    line-height: 1.4;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    padding-bottom: 20px;
 }
